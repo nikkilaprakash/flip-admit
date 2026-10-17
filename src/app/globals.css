@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-white text-ink antialiased; font-feature-settings: "tnum" 0; }
+  h1, h2, h3 { @apply text-ink; letter-spacing: -0.015em; }
+  :focus-visible { outline: 3px solid #0E6B66; outline-offset: 2px; border-radius: 6px; }
+  ::selection { background: #F2B544; color: #172033; }
+}
+.tabular { font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
